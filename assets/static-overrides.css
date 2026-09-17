@@ -275,3 +275,90 @@ html, body { min-height:100%; }
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* ===== V9 About summary: ALWAYS four compact cards above full team photo ===== */
+/* Unique selectors intentionally avoid all earlier responsive grid rules. */
+.about-summary-row {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 8px;
+  padding: 78px 10px 0; /* clears the fixed/sticky top navigation */
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  position: relative;
+  z-index: 20;
+}
+.about-summary-card {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 104px !important;
+  padding: 10px 11px !important;
+  border-radius: 13px !important;
+  background: rgba(15,23,42,.66) !important;
+  border: 1px solid rgba(255,255,255,.11) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+.about-summary-card span {
+  display:block !important;
+  margin:0 0 4px !important;
+  color:#60a5fa !important;
+  font-size:7px !important;
+  line-height:1.1 !important;
+  font-weight:800 !important;
+  letter-spacing:.20em !important;
+}
+.about-summary-card h3 {
+  margin:0 0 5px !important;
+  color:#fff !important;
+  font-size:13px !important;
+  line-height:1.08 !important;
+  font-weight:800 !important;
+  letter-spacing:-.02em !important;
+}
+.about-summary-card .text-base {
+  margin:0 !important;
+  color:#cbd5e1 !important;
+  font-size:8.5px !important;
+  line-height:1.27 !important;
+  font-weight:300 !important;
+}
+.about-hero-compact {
+  padding:0 0 16px !important;
+  margin:0 !important;
+  min-height:0 !important;
+}
+.about-hero-compact .max-w-7xl {
+  width:100% !important;
+  max-width:1280px !important;
+  padding:0 10px !important;
+  box-sizing:border-box !important;
+}
+.about-team-hero {
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center top !important;
+  margin:0 auto 8px !important;
+  border-radius:0 !important;
+}
+.about-hero-compact p {
+  margin:0 auto !important;
+  padding:0 8px !important;
+  font-size:clamp(15px,1.55vw,21px) !important;
+  line-height:1.2 !important;
+}
+/* Keep four abreast even in a narrow desktop window, per request. */
+@media (max-width: 760px) {
+  .about-summary-row { gap:5px !important; padding-left:5px !important; padding-right:5px !important; }
+  .about-summary-card { min-height:96px !important; padding:8px 7px !important; }
+  .about-summary-card h3 { font-size:10.5px !important; }
+  .about-summary-card .text-base { font-size:7px !important; line-height:1.20 !important; }
+  .about-summary-card span { font-size:6px !important; }
+  .about-hero-compact .max-w-7xl { padding-left:5px !important; padding-right:5px !important; }
+}
