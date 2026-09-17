@@ -147,3 +147,71 @@ html, body { min-height:100%; }
   .v4-secondary { padding:28px 16px; }
   .v4-secondary-actions { align-items:flex-start; flex-direction:column; gap:14px; }
 }
+
+/* About page leadership image replacing title */
+.about-team-hero {
+  display:block;
+  width:min(760px, 90vw);
+  max-height:520px;
+  object-fit:cover;
+  margin:0 auto 34px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 24px 70px rgba(2,6,23,.55);
+}
+@media (max-width:640px) {
+  .about-team-hero { width:94vw; max-height:none; margin-bottom:24px; border-radius:16px; }
+}
+
+
+/* ===== About page compact hero + four-across summary cards ===== */
+.about-hero-compact {
+  padding-top: 34px !important;
+  padding-bottom: 34px !important;
+  min-height: 0 !important;
+}
+.about-hero-compact .max-w-7xl {
+  max-width: 1280px;
+}
+.about-team-hero {
+  width: min(900px, 86vw);
+  max-height: 430px;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  object-position: center 47%;
+}
+.about-hero-compact p {
+  margin-top: 0 !important;
+  font-size: clamp(18px, 1.8vw, 25px) !important;
+}
+.about-pillars-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: -2px !important;
+}
+.about-pillar-card {
+  padding: 24px !important;
+  min-height: 250px;
+  border-radius: 22px;
+}
+.about-pillar-card span {
+  margin-bottom: 16px !important;
+}
+.about-pillar-card h3 {
+  font-size: 22px !important;
+  margin-bottom: 16px !important;
+  line-height: 1.12 !important;
+}
+.about-pillar-card .text-base {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+@media (max-width: 1100px) {
+  .about-pillars-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .about-hero-compact { padding-top: 20px !important; padding-bottom: 24px !important; }
+  .about-team-hero { width: 96vw; max-height: none; margin-bottom: 16px; }
+  .about-pillars-grid { grid-template-columns: 1fr; gap: 12px; }
+  .about-pillar-card { min-height: auto; padding: 20px !important; }
+}
