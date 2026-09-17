@@ -215,3 +215,63 @@ html, body { min-height:100%; }
   .about-pillars-grid { grid-template-columns: 1fr; gap: 12px; }
   .about-pillar-card { min-height: auto; padding: 20px !important; }
 }
+
+
+/* ===== V8 About: four compact summary boxes ABOVE full team image ===== */
+.about-pillars-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  max-width: 1280px !important;
+  margin: 16px auto 12px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.about-pillar-card {
+  min-height: 126px !important;
+  padding: 13px 14px !important;
+  border-radius: 16px !important;
+}
+.about-pillar-card span {
+  font-size: 8px !important;
+  letter-spacing: .28em !important;
+  margin-bottom: 7px !important;
+}
+.about-pillar-card h3 {
+  font-size: 16px !important;
+  line-height: 1.12 !important;
+  margin: 0 0 7px !important;
+}
+.about-pillar-card .text-base {
+  font-size: 11px !important;
+  line-height: 1.38 !important;
+}
+.about-hero-compact {
+  padding-top: 0 !important;
+  padding-bottom: 20px !important;
+  min-height: 0 !important;
+}
+.about-team-hero {
+  width: min(1280px, calc(100vw - 20px)) !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 auto 12px !important;
+  border-radius: 0 !important;
+}
+.about-hero-compact p {
+  font-size: clamp(16px, 1.65vw, 23px) !important;
+  line-height: 1.25 !important;
+  margin: 0 auto !important;
+}
+@media (max-width: 900px) {
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px) {
+  .about-pillars-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
