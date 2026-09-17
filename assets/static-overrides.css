@@ -284,7 +284,7 @@ html, body { min-height:100%; }
   width: 100%;
   max-width: 1280px;
   margin: 0 auto 8px;
-  padding: 78px 10px 0; /* clears the fixed/sticky top navigation */
+  padding: 102px 10px 0; /* clears the fixed top navigation with visible breathing room */
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: 8px !important;
@@ -361,4 +361,35 @@ html, body { min-height:100%; }
   .about-summary-card .text-base { font-size:7px !important; line-height:1.20 !important; }
   .about-summary-card span { font-size:6px !important; }
   .about-hero-compact .max-w-7xl { padding-left:5px !important; padding-right:5px !important; }
+}
+
+/* ===== V11 About summary: larger readable type, wrapped text ===== */
+.about-summary-card {
+  min-height: 122px !important;
+  padding: 11px 12px !important;
+  overflow: visible !important;
+}
+.about-summary-card span {
+  font-size: 8px !important;
+  line-height: 1.15 !important;
+  margin-bottom: 5px !important;
+}
+.about-summary-card h3 {
+  font-size: 15px !important;
+  line-height: 1.12 !important;
+  margin-bottom: 6px !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+.about-summary-card .text-base {
+  font-size: 10.5px !important;
+  line-height: 1.30 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+@media (max-width: 760px) {
+  .about-summary-card { min-height: 118px !important; padding: 9px 8px !important; }
+  .about-summary-card h3 { font-size: 12px !important; line-height: 1.12 !important; }
+  .about-summary-card .text-base { font-size: 8px !important; line-height: 1.24 !important; }
+  .about-summary-card span { font-size: 6.5px !important; }
 }
