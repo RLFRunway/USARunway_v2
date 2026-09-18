@@ -23,3 +23,10 @@ Notes
 - Navigation and local assets now use relative paths so the site works both on GitHub Pages and under the USARunway2.com custom domain.
 - The three founding-team photos on About still load from the existing usarunway.com site for now. They should be copied into assets/img before the old host is retired.
 - Hero/background photographs currently load from Unsplash.
+
+Temporary launch page
+- The home page currently displays four full-screen image panels taken from the approved launch-page PDF.
+- Scrolling snaps from one panel to the next.
+- Navigation and call-to-action areas on the first two panels remain clickable through transparent link overlays.
+- The panel images are stored in assets/launch and the launch-page styling is in assets/launch.css.
+- When the original photographs and editable wording become available, replace this temporary screenshot implementation with responsive HTML text and background images.
