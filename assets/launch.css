@@ -20,12 +20,23 @@ body { margin: 0; background: #052d63; overflow-x: hidden; }
 .hotspot:focus-visible {
   outline: 3px solid #fff; outline-offset: 2px; background: rgb(255 255 255 / 12%);
 }
-.launch-nav {
-  position: absolute; z-index: 4; left: 29%; right: 0; top: 0; height: 15.5%;
-  display: flex; align-items: center; justify-content: center; gap: 3.8%;
-  padding: 0 3% 0 2%;
+.nav-cleaner {
+  position: absolute; z-index: 3; left: 29%; right: 0; top: 0; height: 15.5%;
   background: linear-gradient(90deg, rgb(1 37 104), rgb(5 65 145));
-  font: 700 clamp(8px, 1.15vw, 17px)/1 Arial, sans-serif;
+}
+.launch-intro {
+  position: absolute; z-index: 3; left: 7.5%; top: 49.6%; width: 59%; min-height: 12%;
+  margin: 0; padding: 0.25% 1.5% 0.5% 0;
+  display: flex; align-items: flex-start;
+  background: linear-gradient(90deg, rgb(2 49 107 / 98%) 0%, rgb(3 55 117 / 96%) 78%, transparent 100%);
+  color: #fff; font: 400 clamp(12px, 1.48vw, 22px)/1.48 Arial, sans-serif;
+}
+.launch-nav {
+  position: absolute; z-index: 4; left: 7.5%; top: 61.6%; width: 60%; height: 5%;
+  display: flex; align-items: center; justify-content: flex-start; gap: 5%;
+  padding: 0;
+  background: transparent;
+  font: 700 clamp(8px, 1.05vw, 16px)/1 Arial, sans-serif;
   letter-spacing: 0.015em; text-transform: uppercase; white-space: nowrap;
 }
 .launch-nav > a, .services-menu > summary, .services-dropdown a {
@@ -38,7 +49,7 @@ body { margin: 0; background: #052d63; overflow-x: hidden; }
 .services-menu > summary::-webkit-details-marker { display: none; }
 .services-menu > summary::after { content: "▾"; margin-left: 0.45em; font-size: 0.72em; }
 .services-dropdown {
-  position: absolute; left: 50%; top: calc(100% + 1.35rem); transform: translateX(-50%);
+  position: absolute; left: 50%; bottom: calc(100% + 0.8rem); transform: translateX(-50%);
   width: clamp(220px, 25vw, 360px); padding: clamp(16px, 2.2vw, 32px);
   display: grid; gap: clamp(13px, 1.5vw, 22px);
   border: 1px solid rgb(142 173 222 / 30%); border-radius: clamp(14px, 2vw, 28px);
